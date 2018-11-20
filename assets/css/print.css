@@ -1,0 +1,221 @@
+.print-container{
+    margin:15px auto;
+    width:480px;
+    max-width: 100%;
+}
+.print-container:after{
+    display:block;
+    content:" ";
+    clear:both;
+}
+.row{
+    position:relative;
+}
+.row:after{
+    display:block;
+    content:" ";
+    clear:both;
+}
+.col-50{
+    display:block;
+    width:50%;
+    float:left;
+}
+.col-20{
+    display:block;
+    width:20%;
+    float:left;
+}
+.col-30{
+    display:block;
+    width:30%;
+    float:left;
+}
+.col-40{
+    display:block;
+    width:40%;
+    float:left;
+}
+.col-80{
+    display:block;
+    width:80%;
+    float:left;
+}
+.clear{
+    clear:both;
+}
+.text-center{
+    text-align:center;
+}
+.text-right{
+text-align:right;
+}
+.text-left{
+text-align:left;
+}
+.big-size-text{
+    font-size:72px;
+}
+.pad-left-15{
+    padding-left:15px;
+}
+.double-line{
+        border-bottom: 3px double #000;
+    }
+.single-line{
+        border-bottom: 1px solid #000;
+    }
+p{
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size:14px;
+}
+.header:after{
+    display:block;
+    margin: 15px auto;
+    width:80%;
+    content:" ";
+    border-bottom:1px dashed #000;
+    text-align:center;
+}
+.footer:before{
+    display:block;
+    margin: 15px auto;
+    width:80%;
+    content:" ";
+    border-bottom:1px dashed #000;
+    text-align:center;
+}
+.gap-top{
+        margin-top:10px;
+    }
+    .gap-bottom{
+        margin-bottom:10px;
+    }
+    .label-white{
+        color:#fff;
+    }
+    table.bordered td,table.bordered th{
+        border:1px solid #000;
+    }
+    tr.no-border{
+        border:0;
+    }
+    tr.no-border > td{
+        border:0;
+    }
+    table td{
+        font-size:14px;
+    }
+    .text-xs{
+        font-size:0.7em;
+    }
+    .no-print-hide{
+        display:none;
+    }
+@page {
+    /* Chrome sets own margins, we change these printer settings */
+    margin: 0mm 0mm 0mm 5mm; 
+}
+@media print{
+     html,
+    body {
+        width: 80mm;
+    }
+    .print-hide{
+        display:none;
+    }
+    .no-print-hide{
+        display:inherit;
+    }
+    table td{
+        font-size:14px;
+    }
+    .double-line{
+        border-bottom: 3px double #000 !important;
+    }
+    .single-line{
+        border-bottom: 1px solid #000 !important;
+    }
+    table.bordered td{
+        border:1px solid #000;
+    }
+    tr.no-border{
+        border:0;
+    }
+     tr.no-border > td{
+        border:0;
+    }
+    .print-container{
+        width:100%;
+        max-width: 100%;
+        height:auto;
+        page-break-after: always;
+    }
+    p{
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-size:14px;
+    }
+    .text-md{
+        font-size:18px;
+    }
+    .text-xs{
+        font-size:0.7em;
+    }
+    .text-center{
+        text-align:center;
+    }
+    .print-container:after{
+        display:block;
+    content:" ";
+    clear:both;
+    }
+    .row{
+        position:relative;
+    }
+    .row:after{
+        display:block;
+    content:" ";
+    clear:both;
+    }
+    .col-50{
+        display:block;
+        width:50%;
+        float:left;
+    }
+    .col-20{
+        display:block;
+        width:20%;
+        float:left;
+    }
+    .col-30{
+        display:block;
+        width:30%;
+        float:left;
+    }
+    .col-80{
+        display:block;
+        width:80%;
+        float:left;
+    }
+    .pad-left-15{
+        padding-left:15px;
+    }
+    .gap-top{
+        margin-top:10px;
+    }
+    .gap-bottom{
+        margin-bottom:10px;
+    }
+    .bottom-page{
+        height:50px;
+        display:block;
+        text-align:center;
+    }
+    .bottom-page:after{
+        font-size:0.1em;
+        content:".";
+        display:block;
+    }
+}
